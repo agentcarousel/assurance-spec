@@ -2,15 +2,16 @@
 
 > **Status:** Draft 0.1, 2026-11-17. Nothing here is stable.
 >
-> **Name:** "Plinth" is a working codename. The final name will be chosen after a trademark and
-> collision search. Until then, every machine-readable identifier uses the reserved, non-resolving
-> base `https://assurance-spec.invalid/` (see [`schemas/BASE_URI`](schemas/BASE_URI)). Renaming is
-> a single find-and-replace and has no semantic effect.
+> **Name:** the AgentCarousel Specification ("AgentCarousel Spec" for short). It carries the
+> AgentCarousel name because AgentCarousel founded and stewards it. Conformance never depends on an
+> AgentCarousel product (see principle 1). Every machine-readable identifier uses the base
+> `https://agentcarousel.com/spec/` (see [`schemas/BASE_URI`](schemas/BASE_URI)). Identifiers are
+> names, and verifiers never fetch them (INV-6).
 
 ## 1. Mission
 
-Plinth is an open, vendor-neutral specification for producing, exchanging, and independently
-verifying **evidence about how an AI agent behaved under test**.
+The AgentCarousel Specification is an open, vendor-neutral specification for producing,
+exchanging, and independently verifying **evidence about how an AI agent behaved under test**.
 
 Any organization should be able to test an agent and produce portable evidence. Any other
 organization should be able to verify and consume that evidence without depending on the
@@ -22,8 +23,9 @@ producer's tooling, a particular model vendor, a governance platform, a cloud, o
 ### Design principles
 
 1. **Vendor neutrality.** The specification never requires a specific product, model provider,
-   agent framework, or hosted service. That includes the AgentCarousel CLI and the AgentCarousel
-   registry.
+   agent framework, or hosted service. Its name does not change that: conformance never requires
+   the AgentCarousel CLI or the AgentCarousel registry, and the CLI is held to the same conformance
+   kit as any other implementation.
 2. **Evidence over assertions.** A document states what was tested, against which configuration,
    by which method, with what result, and what was *not* tested. It never states that an agent is
    "safe".
@@ -100,7 +102,7 @@ Coverage of each layer in v0.1:
 
 ## 4. Three identities
 
-Plinth keeps three identities separate and never infers one from another:
+The Specification keeps three identities separate and never infers one from another:
 
 1. **Agent identity.** The logical agent, such as `vulnerability-remediator`. It is a URI chosen by
    the producer, plus a version. It stays the same across deployments.
@@ -134,12 +136,13 @@ commonly overstates what was shown.
 
 ## 6. Reference implementation status
 
-The AgentCarousel CLI is the reference implementation. The **released** CLI (v0.8.1) does not
-satisfy this charter. An unreleased branch, `feat/assurance-evidence-v0.1`, closes most gaps. This
-table is kept current so that nobody, including AgentCarousel, overstates what the reference
-implementation proves.
+The AgentCarousel CLI (`agc`) is the reference implementation. Version 0.8.1 did not satisfy this
+charter. Version 0.9.0 closed most gaps, and 0.9.1 emits this draft's identifiers. Tool calls are
+still synthesized, so no evidence from the reference implementation supports a claim about tool
+behaviour. This table is kept current so that nobody, including AgentCarousel, overstates what the
+reference implementation proves.
 
-| Area | Released v0.8.1 | Unreleased branch (2026-11-18) | Spec requirement |
+| Area | Before 0.9 (v0.8.1) | Released v0.9.x (2026-11-19) | Spec requirement |
 |---|---|---|---|
 | Signing | Hashes only | minisign signature over `MANIFEST.json`, covering evidence and statement | §4 attestation |
 | Offline verification | `trust-check` contacts the registry first | `agc verify` checks integrity, signature, and v0.1 conformance offline | INV-6 |
@@ -153,11 +156,11 @@ implementation proves.
 
 ## 7. Relationship to existing standards
 
-| Standard | Role in Plinth |
+| Standard | Role in this specification |
 |---|---|
-| **OpenTelemetry GenAI semantic conventions** (`invoke_agent`, `execute_tool`; Development stability) | Describe *what happened* at runtime. Observed trace steps may be derived from OTel spans. Plinth does not define a trace format. See [`spec/08-interop.md`](spec/08-interop.md). |
-| **in-toto Attestation Framework** (Statement v1, DSSE) | The integrity and provenance envelope. Plinth defines one predicate type for agent evaluations and maps to the generic in-toto `test-result/v0.1` predicate. |
-| **OSCAL** (Assessment Plan and Assessment Results) | How results are communicated to GRC tooling. Plinth evidence maps to Assessment Results. It does not replace them. |
+| **OpenTelemetry GenAI semantic conventions** (`invoke_agent`, `execute_tool`; Development stability) | Describe *what happened* at runtime. Observed trace steps may be derived from OTel spans. This specification does not define a trace format. See [`spec/08-interop.md`](spec/08-interop.md). |
+| **in-toto Attestation Framework** (Statement v1, DSSE) | The integrity and provenance envelope. This specification defines one predicate type for agent evaluations and maps to the generic in-toto `test-result/v0.1` predicate. |
+| **OSCAL** (Assessment Plan and Assessment Results) | How results are communicated to GRC tooling. Evidence defined here maps to Assessment Results. It does not replace them. |
 | **TEVV-Athlon** (NIST AI 200-2) | The assessment-plan structure (goals → blocks → events) that a test suite can implement. It maps to an OSCAL Assessment Plan. |
 | **NIST AI RMF 1.0** | A risk taxonomy for crosswalks only, never a certification basis. Every mapping pins the framework version. A revision of AI RMF 1.0 is in progress. |
 | **OWASP agentic-AI threat guidance** | A source of adversarial scenarios for test suites and future profiles. |
@@ -167,7 +170,7 @@ implementation proves.
 
 ## 8. Trust model
 
-Plinth separates three concepts that are often merged into one "trust level":
+The Specification separates three concepts that are often merged into one "trust level":
 
 1. **Evidence status.** Is there evidence, is it intact, and is it signed by a key the verifier
    trusts? Values: `none`, `integrity_only`, `verified`, `nonconformant`. A verifier computes this
@@ -185,13 +188,13 @@ Plinth separates three concepts that are often merged into one "trust level":
 **Freshness.** Evidence is stale for a configuration whose identity (section 4) differs from the
 one that was tested. Verifiers compare configuration digests. They do not use calendar age alone.
 
-**Legacy vocabularies:** AgentCarousel currently uses two other trust vocabularies. Neither is part
-of this specification.
+**Legacy vocabularies:** the AgentCarousel CLI and registry currently use two other trust
+vocabularies. Neither is part of this specification.
 
 | Existing vocabulary | Where | Status under this charter |
 |---|---|---|
-| `Experimental → CarouselCandidate → Stable → Trusted` | AgentCarousel registry | AgentCarousel registry listing policy. Not a Plinth evidence status or determination. Deprecated for specification purposes. |
-| `certification_track: none / candidate / stable / trusted` | AgentCarousel fixture files | Declarative producer intent. Not part of Plinth. Deprecated for specification purposes. |
+| `Experimental → CarouselCandidate → Stable → Trusted` | AgentCarousel registry | AgentCarousel registry listing policy. Not an evidence status or determination defined by this specification. Deprecated for specification purposes. |
+| `certification_track: none / candidate / stable / trusted` | AgentCarousel fixture files | Declarative producer intent. Not part of this specification. Deprecated for specification purposes. |
 
 ## 9. Security and privacy defaults
 
@@ -221,7 +224,7 @@ Releases are gated on interoperability, not on dates.
 | **0.1 (this draft)** | Schemas, prose, and a conformance kit. The reference CLI emits conformant evidence, and the independent Python verifier in `conformance/` verifies it. |
 | **0.2** | RFCs accepted for assurance profiles and dimensions, for a normative portable test-definition schema, and for DSSE-native signing. Observed tool calls exist in at least one implementation. |
 | **0.9** | At least one producer not written by AgentCarousel emits conformant evidence, and at least two independent verifiers agree on the conformance vectors. |
-| **1.0** | Final name chosen, stable identifiers hosted, external implementers on the steering group. |
+| **1.0** | Stable identifiers resolve to the published schemas, and external implementers sit on the steering group. |
 
 The most important test of the whole effort is this: **can an organization produce conformant
 evidence without the AgentCarousel CLI, and can another organization verify it without the

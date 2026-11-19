@@ -78,17 +78,17 @@
   },
   "execution": {
     "environment": {
-      "source_revision": "078a6a14045fab4504156884e826af016c8f06a1"
+      "source_revision": "b7882020636659b704347bc282281c78741b2bcb"
     },
-    "finished_at": "2026-11-19T02:15:19.993Z",
+    "finished_at": "2026-11-19T18:32:57.347Z",
     "implementation": {
       "name": "agentcarousel",
       "uri": "https://github.com/agentcarousel/agentcarousel",
-      "version": "0.8.1"
+      "version": "0.9.1"
     },
     "mode": "mock",
     "run_id": "example-weather-demo-mock",
-    "started_at": "2026-11-19T02:15:19.954Z"
+    "started_at": "2026-11-19T18:32:57.309Z"
   },
   "limitations": [
     {
@@ -111,7 +111,7 @@
     }
   ],
   "spec": {
-    "name": "assurance-spec/evidence",
+    "name": "agentcarousel-spec/evidence",
     "version": "0.1.0"
   },
   "subject": {

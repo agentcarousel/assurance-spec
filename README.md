@@ -1,14 +1,14 @@
-# Agent assurance specification (working codename: Plinth)
+# AgentCarousel Specification
 
-An open, vendor-neutral specification for **portable, independently verifiable evidence about how
-an AI agent behaved under test**.
+The AgentCarousel Specification is an open, vendor-neutral specification for **portable,
+independently verifiable evidence about how an AI agent behaved under test**.
 
 A producer runs an evaluation and writes a bundle. Anyone else can check that bundle offline,
 without the producer's tools, a model vendor, or a registry. The check confirms what was tested,
 against which configuration, by which method, with what result, and what was *not* tested.
 
-> **Status: draft 0.1. Not stable.** Identifiers use the placeholder base
-> `https://assurance-spec.invalid/` until a final name is chosen. "Plinth" is a codename.
+> **Status: draft 0.1. Not stable.** Identifiers use the base `https://agentcarousel.com/spec/`.
+> They are names: verifiers never fetch them.
 
 ## Read first
 
@@ -40,7 +40,7 @@ agentcarousel-evidence-<run>/
 
 | Role | Implementation | Status |
 |---|---|---|
-| Producer and verifier (reference) | [AgentCarousel CLI](https://github.com/agentcarousel/agentcarousel) (`agc export`, `agc verify`) | Emits and verifies v0.1 on an unreleased branch; agrees with `verify.py` on all vectors. See [CHARTER.md §6](CHARTER.md#6-reference-implementation-status) |
+| Producer and verifier (reference) | [AgentCarousel CLI](https://github.com/agentcarousel/agentcarousel) (`agc export`, `agc verify`) | Emits and verifies v0.1 from agc 0.9.1; agrees with `verify.py` on all vectors. See [CHARTER.md §6](CHARTER.md#6-reference-implementation-status) |
 | Verifier (Python, separate implementation) | [`conformance/verify.py`](conformance/) | Passes all 19 [conformance vectors](conformance/vectors/) |
 
 Implementations that are independent of AgentCarousel are the main goal of this project. Please

@@ -4,16 +4,16 @@
       "href": "agentcarousel://fixture-suite"
     },
     "metadata": {
-      "last-modified": "2026-11-19T02:15:20.143802Z",
+      "last-modified": "2026-11-19T18:32:57.398807Z",
       "oscal-version": "1.1.2",
-      "published": "2026-11-19T02:15:20.143802Z",
+      "published": "2026-11-19T18:32:57.398807Z",
       "title": "AgentCarousel Assessment Results — nist-ai-rmf",
       "version": "1.0.0"
     },
     "results": [
       {
         "description": "Automated behavioral attestation for skill 'weather-demo' against framework 'nist-ai-rmf'.",
-        "end": "2026-11-19T02:15:19.993866Z",
+        "end": "2026-11-19T18:32:57.347060Z",
         "props": [
           {
             "name": "skill",
@@ -973,7 +973,7 @@
             "uuid": "62cb4409-7595-45b3-9989-8445daf6fea4"
           }
         ],
-        "start": "2026-11-19T02:15:19.954733Z",
+        "start": "2026-11-19T18:32:57.309620Z",
         "title": "AgentCarousel Compliance Assessment — nist-ai-rmf",
         "uuid": "4c55d565-f76c-4428-849d-823e4b2f0888"
       }

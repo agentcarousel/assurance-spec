@@ -23,7 +23,7 @@ Files that are not standard are informative. Their presence does not change the 
 
 `attestation.intoto.json` is an in-toto Statement v1:
 
-- `predicateType`: `https://assurance-spec.invalid/predicates/agent-evaluation/v0.1`
+- `predicateType`: `https://agentcarousel.com/spec/predicates/agent-evaluation/v0.1`
 - `subject`: the **tested artifacts**, following in-toto's guidance for test results ("the source
   artifacts tested"):
   - one subject per `configuration.test_suite.files[*]`, named by its `path`

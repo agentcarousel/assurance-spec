@@ -14,10 +14,14 @@ BCP 14 ([RFC 2119], [RFC 8174]) when, and only when, they appear in all capitals
 ## Identifiers
 
 Every machine-readable identifier in this draft uses the base URI in
-[`../schemas/BASE_URI`](../schemas/BASE_URI). That base is `https://assurance-spec.invalid/`,
-which is reserved by RFC 2606 and never resolves. Verifiers MUST NOT attempt to dereference it
-(INV-6). The base will change once the final name is chosen. That change will be recorded in the
-CHANGELOG and is not a semantic change.
+[`../schemas/BASE_URI`](../schemas/BASE_URI): `https://agentcarousel.com/spec/`. Identifiers are
+names. Verifiers MUST NOT attempt to dereference them (INV-6); they resolve schemas from a local
+copy.
+
+Drafts before this base used the provisional base `https://assurance-spec.invalid/`, emitted only
+by AgentCarousel CLI 0.9.0. It is not an identifier of any version of this specification, and
+verifiers MUST treat documents that use it as an unsupported version (see
+[VERSIONING.md](../VERSIONING.md)).
 
 ## Digests
 

@@ -1,10 +1,10 @@
 # agentcarousel Evidence Report — weather-demo
 
 **Run ID:** example-weather-demo-mock
-**Command:** `agc eval fixtures/weather-demo/cases.yaml --execution-mode mock --filter-tags core --run-id example-weather-demo-mock --json`
-**Started:** 2026-11-19 02:15:19 UTC
-**Finished:** 2026-11-19 02:15:19 UTC
-**agentcarousel version:** 0.8.1
+**Command:** `agc eval fixtures/weather-demo/cases.yaml --execution-mode mock --filter-tags core --run-id example-weather-demo-mock`
+**Started:** 2026-11-19 18:32:57 UTC
+**Finished:** 2026-11-19 18:32:57 UTC
+**agentcarousel version:** 0.9.1
 
 ## Summary
 
