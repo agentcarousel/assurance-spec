@@ -136,12 +136,13 @@ commonly overstates what was shown.
 
 ## 6. Reference implementation status
 
-The AgentCarousel CLI is the reference implementation. The **released** CLI (v0.8.1) does not
-satisfy this charter. An unreleased branch, `feat/assurance-evidence-v0.1`, closes most gaps. This
-table is kept current so that nobody, including AgentCarousel, overstates what the reference
-implementation proves.
+The AgentCarousel CLI (`agc`) is the reference implementation. Version 0.8.1 did not satisfy this
+charter. Version 0.9.0 closed most gaps, and 0.9.1 emits this draft's identifiers. Tool calls are
+still synthesized, so no evidence from the reference implementation supports a claim about tool
+behaviour. This table is kept current so that nobody, including AgentCarousel, overstates what the
+reference implementation proves.
 
-| Area | Released v0.8.1 | Unreleased branch (2026-11-18) | Spec requirement |
+| Area | Before 0.9 (v0.8.1) | Released v0.9.x (2026-11-19) | Spec requirement |
 |---|---|---|---|
 | Signing | Hashes only | minisign signature over `MANIFEST.json`, covering evidence and statement | §4 attestation |
 | Offline verification | `trust-check` contacts the registry first | `agc verify` checks integrity, signature, and v0.1 conformance offline | INV-6 |
