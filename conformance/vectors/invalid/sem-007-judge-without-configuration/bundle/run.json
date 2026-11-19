@@ -1,11 +1,11 @@
 {
   "id": "example-weather-demo-mock",
   "schema_version": 1,
-  "started_at": "2026-11-19T02:15:19.954733Z",
-  "finished_at": "2026-11-19T02:15:19.993866Z",
+  "started_at": "2026-11-19T18:32:57.309620Z",
+  "finished_at": "2026-11-19T18:32:57.347060Z",
   "command": "eval",
-  "git_sha": "078a6a14045fab4504156884e826af016c8f06a1",
-  "agentcarousel_version": "0.8.1",
+  "git_sha": "b7882020636659b704347bc282281c78741b2bcb",
+  "agentcarousel_version": "0.9.1",
   "config_hash": "f8fb60088bac000aa8202e5127673b4fe2a09b05347536568b254edeb5b9e689",
   "cases": [
     {
@@ -151,7 +151,7 @@
     "latency_p95_ms": 0.0,
     "latency_p99_ms": 0.0,
     "generator_model": "claude-3-5-sonnet",
-    "command_line": "agc eval fixtures/weather-demo/cases.yaml --execution-mode mock --filter-tags core --run-id example-weather-demo-mock --json"
+    "command_line": "agc eval fixtures/weather-demo/cases.yaml --execution-mode mock --filter-tags core --run-id example-weather-demo-mock"
   },
   "fixture_bundle_id": "example/weather-demo",
   "fixture_bundle_version": "1.0.0",

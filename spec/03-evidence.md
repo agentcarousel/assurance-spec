@@ -11,7 +11,7 @@ producer may ship such values in other files of the bundle, labelled as derived.
 
 | Property | Content |
 |---|---|
-| `spec` | `{"name": "assurance-spec/evidence", "version": "0.1.x"}` |
+| `spec` | `{"name": "agentcarousel-spec/evidence", "version": "0.1.x"}` |
 | `subject` | `agent` (section 1.2) and `configuration` (section 1.3) |
 | `execution` | `run_id`, `mode` (`mock`, `live`, or `batch`), producing `implementation`, timestamps, `repetitions`, `environment` |
 | `disclosure` | What sensitive material the bundle carries (section 3.5) |

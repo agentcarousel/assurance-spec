@@ -9,5 +9,8 @@
   do not implement, and MUST NOT guess.
 - **Deprecation:** after 1.0, a feature is marked deprecated for at least one minor release and six
   months before it is removed.
-- **Identifier base:** moving from `https://assurance-spec.invalid/` to the final hosted base is
-  recorded in the CHANGELOG. It does not change semantics.
+- **Identifier base:** `https://agentcarousel.com/spec/`. The provisional base
+  `https://assurance-spec.invalid/`, emitted only by AgentCarousel CLI 0.9.0, was retired before
+  0.1.0. Documents that use it are an unsupported draft: verifiers MUST NOT treat them as any
+  version of this specification. A producer re-creates conformant evidence by exporting the same
+  run again with a current implementation.

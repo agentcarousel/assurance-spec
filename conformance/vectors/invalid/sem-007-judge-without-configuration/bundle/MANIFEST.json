@@ -6,11 +6,11 @@
     },
     {
       "path": "assessment-results.oscal.json",
-      "sha256": "sha256:74903d12858f5a952966d57f067180d5d0b31f43962118d86d04c6ae682e7e35"
+      "sha256": "sha256:352f85832174095b4b42fe4cfa0b8aac4e8248d9b65b4e3e455209c76aa32730"
     },
     {
       "path": "attestation.intoto.json",
-      "sha256": "sha256:30d046aa8160cdd02c1100d2bb1a3af7643befc8995987fc359ca14ea15d836f"
+      "sha256": "sha256:b10f3ede00e9650a05db9055d6cb4d334f92a090fa16f6b21ce5a55d69b424a8"
     },
     {
       "path": "compliance_eu-ai-act.md",
@@ -26,11 +26,11 @@
     },
     {
       "path": "environment_fingerprint.json",
-      "sha256": "sha256:97b0ad9ff89d3cba9b8f7477de55da3a6736a265fb66860327ff9f599f4aca7f"
+      "sha256": "sha256:1ff74f97b7115441fd72be4fc4d726ebdb7318fea59eb84962148d86461c3319"
     },
     {
       "path": "evidence.json",
-      "sha256": "sha256:aa926903c625cc3ac80a9f2b5cd42492f6bc3c08f072364fb4849d61e6adb15c"
+      "sha256": "sha256:b29fcfa4c0bdfc28d0fdd73144573d60a660043a613ef729f32b407f400e6cea"
     },
     {
       "path": "fixture_bundle.lock",
@@ -38,15 +38,15 @@
     },
     {
       "path": "metrics.json",
-      "sha256": "sha256:ff70db491af14cc41bc51e95c11fea13b7fca8bfac156cb586810af6dae827f4"
+      "sha256": "sha256:24cee635765f71dcadc5361930ed12166572caeb26956c66ad0068bc131129cd"
     },
     {
       "path": "report.md",
-      "sha256": "sha256:bd12dbb0509a33e85cf4eacfaec9d6fb61cdaa9e058880f013cd13b8df48c631"
+      "sha256": "sha256:3348bd35afe5bb1285361acad4ab826c2fec696491b0032b4913bebbf2d3334d"
     },
     {
       "path": "run.json",
-      "sha256": "sha256:cd43ea1c62d21eb3a4371cae2e00e78cd17f08dc2c72f7f8f1963e0f83900fed"
+      "sha256": "sha256:ad106da49a055690580a709847337a10012b32f0cdcf46acc37b2b49f0b4253e"
     }
   ],
   "manifest_version": 1

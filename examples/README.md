@@ -19,8 +19,8 @@ not kept.
 
 ### Regenerating
 
-Run this from `examples/source/` with the reference CLI built from branch
-`feat/assurance-evidence-v0.1`, invoked as `agc` from your `PATH`. The command line is recorded in
+Run this from `examples/source/` with the reference CLI, AgentCarousel CLI 0.9.1 or later,
+invoked as `agc` from your `PATH`. The command line is recorded in
 `run.json` and `report.md`, so calling the binary by an absolute path would publish that path.
 
 ```bash

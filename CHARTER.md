@@ -4,10 +4,9 @@
 >
 > **Name:** the AgentCarousel Specification ("AgentCarousel Spec" for short). It carries the
 > AgentCarousel name because AgentCarousel founded and stewards it. Conformance never depends on an
-> AgentCarousel product (see principle 1). Until the identifiers move to their hosted base, every
-> machine-readable identifier uses the reserved, non-resolving base `https://assurance-spec.invalid/`
-> (see [`schemas/BASE_URI`](schemas/BASE_URI)). That move is a single find-and-replace and has no
-> semantic effect.
+> AgentCarousel product (see principle 1). Every machine-readable identifier uses the base
+> `https://agentcarousel.com/spec/` (see [`schemas/BASE_URI`](schemas/BASE_URI)). Identifiers are
+> names, and verifiers never fetch them (INV-6).
 
 ## 1. Mission
 

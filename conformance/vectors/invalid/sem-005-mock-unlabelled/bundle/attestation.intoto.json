@@ -39,14 +39,14 @@
         "version": "1.0.0"
       }
     },
-    "evaluated_at": "2026-11-19T02:15:19.993Z",
+    "evaluated_at": "2026-11-19T18:32:57.347Z",
     "evidence_documents": [
       {
-        "digest": "sha256:cbf87d14894c86a85439015f5fac9594f6b94a334295b8cd26f4538e17da60c2",
+        "digest": "sha256:c4d7590139de637f05854c81bbc1ccc537dacf556128ab6817db02f22320ec2c",
         "path": "evidence.json"
       },
       {
-        "digest": "sha256:cd43ea1c62d21eb3a4371cae2e00e78cd17f08dc2c72f7f8f1963e0f83900fed",
+        "digest": "sha256:ad106da49a055690580a709847337a10012b32f0cdcf46acc37b2b49f0b4253e",
         "path": "run.json"
       }
     ],
@@ -69,7 +69,7 @@
     "producer": {
       "name": "agentcarousel",
       "uri": "https://github.com/agentcarousel/agentcarousel",
-      "version": "0.8.1"
+      "version": "0.9.1"
     },
     "run_id": "example-weather-demo-mock",
     "summary": {
@@ -83,7 +83,7 @@
       "total": 3
     }
   },
-  "predicateType": "https://assurance-spec.invalid/predicates/agent-evaluation/v0.1",
+  "predicateType": "https://agentcarousel.com/spec/predicates/agent-evaluation/v0.1",
   "subject": [
     {
       "digest": {
