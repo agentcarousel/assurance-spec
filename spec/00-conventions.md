@@ -16,7 +16,7 @@ BCP 14 ([RFC 2119], [RFC 8174]) when, and only when, they appear in all capitals
 Every machine-readable identifier in this draft uses the base URI in
 [`../schemas/BASE_URI`](../schemas/BASE_URI). That base is `https://assurance-spec.invalid/`,
 which is reserved by RFC 2606 and never resolves. Verifiers MUST NOT attempt to dereference it
-(INV-6). The base will change once the final name is chosen. That change will be recorded in the
+(INV-6). The base will change once the identifiers are hosted. That change will be recorded in the
 CHANGELOG and is not a semantic change.
 
 ## Digests

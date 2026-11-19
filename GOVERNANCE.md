@@ -24,4 +24,4 @@ Trigger: at least two implementations not written by AgentCarousel.
 Trigger: sustained multi-vendor adoption.
 
 - The specification moves to an independent foundation or standards body. Its governance becomes
-  separate from any commercial service.
+  separate from any commercial service, and its name may change on that move.

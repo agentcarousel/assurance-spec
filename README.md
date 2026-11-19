@@ -1,14 +1,14 @@
-# Agent assurance specification (working codename: Plinth)
+# AgentCarousel Specification
 
-An open, vendor-neutral specification for **portable, independently verifiable evidence about how
-an AI agent behaved under test**.
+The AgentCarousel Specification is an open, vendor-neutral specification for **portable,
+independently verifiable evidence about how an AI agent behaved under test**.
 
 A producer runs an evaluation and writes a bundle. Anyone else can check that bundle offline,
 without the producer's tools, a model vendor, or a registry. The check confirms what was tested,
 against which configuration, by which method, with what result, and what was *not* tested.
 
 > **Status: draft 0.1. Not stable.** Identifiers use the placeholder base
-> `https://assurance-spec.invalid/` until a final name is chosen. "Plinth" is a codename.
+> `https://assurance-spec.invalid/` until they move to their hosted base.
 
 ## Read first
 
