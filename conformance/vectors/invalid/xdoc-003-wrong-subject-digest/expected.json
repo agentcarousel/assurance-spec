@@ -1,0 +1,7 @@
+{
+  "description": "A statement subject digest does not match the tested artifact.",
+  "result": "nonconformant",
+  "rules": [
+    "XDOC-003"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "The archive contains a symbolic link.",
+  "result": "failed",
+  "rules": [
+    "BND-001"
+  ]
+}

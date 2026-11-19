@@ -1,0 +1,7 @@
+{
+  "description": "A case status outside the schema enum.",
+  "result": "nonconformant",
+  "rules": [
+    "SCH-001"
+  ]
+}

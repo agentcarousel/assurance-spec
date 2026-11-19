@@ -1,0 +1,7 @@
+{
+  "description": "Mock execution without the mock_execution limitation.",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-005"
+  ]
+}

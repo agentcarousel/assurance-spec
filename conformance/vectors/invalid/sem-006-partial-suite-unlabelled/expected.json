@@ -1,0 +1,7 @@
+{
+  "description": "Not-tested cases without the partial_suite limitation (INV-1).",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-006"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "path": "REDACTION_POLICY.md",
+      "sha256": "sha256:4f691a66582df72c4bfb075437b6db2ae613cf7a3d74675f96b3fe6807bca115"
+    },
+    {
+      "path": "assessment-results.oscal.json",
+      "sha256": "sha256:74903d12858f5a952966d57f067180d5d0b31f43962118d86d04c6ae682e7e35"
+    },
+    {
+      "path": "attestation.intoto.json",
+      "sha256": "sha256:30d046aa8160cdd02c1100d2bb1a3af7643befc8995987fc359ca14ea15d836f"
+    },
+    {
+      "path": "compliance_eu-ai-act.md",
+      "sha256": "sha256:a2bd32abf417496faab65f514ce8674bd256f1bfe72f846158de3b4b212a8d6f"
+    },
+    {
+      "path": "compliance_iso-42001.md",
+      "sha256": "sha256:aece59ccda24d2cee68f165bb03b58bfcc145591ccaaaa8605c254ca85f64f55"
+    },
+    {
+      "path": "compliance_nist-ai-rmf.md",
+      "sha256": "sha256:a9a3289207e5a2c97623acf93fc4157843891400dc60b9e38f3091f8efa06909"
+    },
+    {
+      "path": "environment_fingerprint.json",
+      "sha256": "sha256:97b0ad9ff89d3cba9b8f7477de55da3a6736a265fb66860327ff9f599f4aca7f"
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "sha256:aa926903c625cc3ac80a9f2b5cd42492f6bc3c08f072364fb4849d61e6adb15c"
+    },
+    {
+      "path": "fixture_bundle.lock",
+      "sha256": "sha256:dba5b31615c3315175cf575f28dd47f1846b57354ea4f4097113bb844fd94375"
+    },
+    {
+      "path": "metrics.json",
+      "sha256": "sha256:ff70db491af14cc41bc51e95c11fea13b7fca8bfac156cb586810af6dae827f4"
+    },
+    {
+      "path": "report.md",
+      "sha256": "sha256:bd12dbb0509a33e85cf4eacfaec9d6fb61cdaa9e058880f013cd13b8df48c631"
+    },
+    {
+      "path": "run.json",
+      "sha256": "sha256:cd43ea1c62d21eb3a4371cae2e00e78cd17f08dc2c72f7f8f1963e0f83900fed"
+    }
+  ],
+  "manifest_version": 1
+}

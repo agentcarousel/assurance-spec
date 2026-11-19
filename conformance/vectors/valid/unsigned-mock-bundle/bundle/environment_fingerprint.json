@@ -1,0 +1,11 @@
+{
+  "agentcarousel_version": "0.8.1",
+  "arch": "x86_64",
+  "fixture_bundle_id": "example/weather-demo",
+  "fixture_bundle_version": "1.0.0",
+  "git_sha": "078a6a14045fab4504156884e826af016c8f06a1",
+  "next_attestation_due": "2027-02-17T02:15:20.066089+00:00",
+  "os": "macos",
+  "rust_version": "unknown",
+  "timestamp_utc": "2026-11-19T02:15:20.066073+00:00"
+}

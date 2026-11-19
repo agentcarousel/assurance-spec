@@ -1,0 +1,7 @@
+{
+  "description": "A failed critical case is missing from critical_failures (INV-2).",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-002"
+  ]
+}

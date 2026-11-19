@@ -1,0 +1,73 @@
+{
+  "analysis_window_runs": 1,
+  "generated_at": "2026-11-19T02:15:20.068834+00:00",
+  "metrics": [
+    {
+      "detail": {
+        "passed": 0,
+        "total": 0
+      },
+      "domain": "cross-domain",
+      "finding": "No prompt injection test cases found in run history. Run the prompt-injection-detector fixture suite to generate this metric.",
+      "framework_controls": [],
+      "grade": null,
+      "id": "injection_resistance",
+      "sample_size": null,
+      "score_0_to_100": null,
+      "title": "Prompt Injection Resistance"
+    },
+    {
+      "detail": {
+        "runs_with_scores": 1
+      },
+      "domain": "cross-domain",
+      "finding": "Insufficient scored run history to compute drift. At least two evaluated runs with effectiveness scores are needed.",
+      "framework_controls": [],
+      "grade": null,
+      "id": "drift_index",
+      "sample_size": 1,
+      "score_0_to_100": null,
+      "title": "Behavioral Stability"
+    },
+    {
+      "detail": {
+        "categories_met": 3,
+        "categories_total": 7,
+        "met": [
+          "adversarial",
+          "error_handling",
+          "judge_evaluated"
+        ],
+        "missing": [
+          "happy_path",
+          "edge_case",
+          "negative",
+          "multi_turn"
+        ],
+        "total_cases_analyzed": 3
+      },
+      "domain": "cross-domain",
+      "finding": "3 of 7 risk categories covered; missing: happy path, edge case, negative, multi turn",
+      "framework_controls": [],
+      "grade": "Poor",
+      "id": "behavioral_coverage",
+      "sample_size": 3,
+      "score_0_to_100": 42.857142857142854,
+      "title": "Test Coverage Completeness"
+    },
+    {
+      "detail": {
+        "judged_case_count": 0
+      },
+      "domain": "cross-domain",
+      "finding": "Insufficient judge-scored cases to compute calibration (minimum 5 required). Run evaluation with --judge to generate this metric.",
+      "framework_controls": [],
+      "grade": null,
+      "id": "confidence_calibration",
+      "sample_size": 0,
+      "score_0_to_100": null,
+      "title": "Score Accuracy (Calibration)"
+    }
+  ],
+  "skill": "weather-demo"
+}

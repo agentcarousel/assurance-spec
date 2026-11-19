@@ -1,0 +1,7 @@
+{
+  "description": "The statement summary disagrees with evidence.json.",
+  "result": "nonconformant",
+  "rules": [
+    "XDOC-002"
+  ]
+}

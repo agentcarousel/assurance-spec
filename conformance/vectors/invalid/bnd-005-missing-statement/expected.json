@@ -1,0 +1,7 @@
+{
+  "description": "evidence.json without attestation.intoto.json.",
+  "result": "nonconformant",
+  "rules": [
+    "BND-005"
+  ]
+}

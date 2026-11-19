@@ -1,0 +1,7 @@
+{
+  "description": "The predicate references MANIFEST.json (circular digest).",
+  "result": "nonconformant",
+  "rules": [
+    "XDOC-001"
+  ]
+}

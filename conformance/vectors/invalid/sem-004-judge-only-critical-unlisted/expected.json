@@ -1,0 +1,7 @@
+{
+  "description": "A critical case decided only by an LLM judge is not disclosed (INV-4).",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-004"
+  ]
+}

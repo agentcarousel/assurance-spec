@@ -1,0 +1,105 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "agent": {
+      "external_ids": [
+        {
+          "id": "AG-0001",
+          "system": "example-inventory"
+        }
+      ],
+      "framework": "none",
+      "id": "tag:example.com,2026:agent/weather-demo",
+      "owner": "Example Platform Team",
+      "risk_class": "low",
+      "tools": [
+        {
+          "name": "weather_lookup",
+          "scopes": [
+            "read"
+          ]
+        }
+      ],
+      "version": "1.0.0"
+    },
+    "configuration": {
+      "system_prompt": {
+        "digest": "sha256:f0af588e9699271391dc98cc6fa732eaa779f194facb35878e1634c4ac483b59",
+        "path": "fixtures/weather-demo/prompt.md"
+      },
+      "test_suite": {
+        "case_count": 3,
+        "files": [
+          {
+            "digest": "sha256:5c3663f828d532bf813bf32b911308f412638dad0eb379982820992dca30d3eb",
+            "path": "fixtures/weather-demo/cases.yaml"
+          }
+        ],
+        "id": "example/weather-demo",
+        "version": "1.0.0"
+      }
+    },
+    "evaluated_at": "2026-11-19T02:15:19.993Z",
+    "evidence_documents": [
+      {
+        "digest": "sha256:e89224ac10347d5f31aeeadaf07f3b8bc5421534bb79f24940e255e29c034ad7",
+        "path": "evidence.json"
+      },
+      {
+        "digest": "sha256:cd43ea1c62d21eb3a4371cae2e00e78cd17f08dc2c72f7f8f1963e0f83900fed",
+        "path": "run.json"
+      }
+    ],
+    "limitations": [
+      {
+        "code": "mock_execution",
+        "detail": "No model was called; agent outputs came from fixture mocks."
+      },
+      {
+        "cases": [
+          "weather-demo/tool-lookup"
+        ],
+        "code": "tool_calls_not_observed",
+        "detail": "Tool-call steps were synthesized from each case's expected tool sequence, not emitted by the agent; they show nothing about the agent's tool use."
+      },
+      {
+        "cases": [
+          "weather-demo/smalltalk"
+        ],
+        "code": "partial_suite",
+        "detail": "1 suite case(s) were not executed."
+      }
+    ],
+    "producer": {
+      "name": "agentcarousel",
+      "uri": "https://github.com/agentcarousel/agentcarousel",
+      "version": "0.8.1"
+    },
+    "run_id": "example-weather-demo-mock",
+    "summary": {
+      "critical_failures": 1,
+      "error": 0,
+      "failed": 1,
+      "flaky": 0,
+      "not_tested": 1,
+      "passed": 1,
+      "timed_out": 0,
+      "total": 3
+    }
+  },
+  "predicateType": "https://assurance-spec.invalid/predicates/agent-evaluation/v0.1",
+  "subject": [
+    {
+      "digest": {
+        "sha256": "5c3663f828d532bf813bf32b911308f412638dad0eb379982820992dca30d3eb"
+      },
+      "name": "fixtures/weather-demo/cases.yaml"
+    },
+    {
+      "digest": {
+        "sha256": "f0af588e9699271391dc98cc6fa732eaa779f194facb35878e1634c4ac483b59"
+      },
+      "name": "fixtures/weather-demo/prompt.md"
+    }
+  ]
+}

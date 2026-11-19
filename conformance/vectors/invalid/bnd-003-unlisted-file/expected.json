@@ -1,0 +1,7 @@
+{
+  "description": "A file not listed in the manifest.",
+  "result": "failed",
+  "rules": [
+    "BND-003"
+  ]
+}

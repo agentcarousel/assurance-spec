@@ -1,0 +1,5 @@
+{
+  "description": "The example bundle, signed.",
+  "pubkey": "test.pub",
+  "result": "verified"
+}

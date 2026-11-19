@@ -1,0 +1,8 @@
+{
+  "description": "Evidence edited and manifest regenerated, but the signature cannot be.",
+  "pubkey": "test.pub",
+  "result": "failed",
+  "rules": [
+    "SIG-001"
+  ]
+}

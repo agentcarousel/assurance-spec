@@ -1,0 +1,7 @@
+{
+  "description": "Synthesized tool calls without the tool_calls_not_observed limitation (INV-3).",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-003"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "report.md edited after export.",
+  "result": "failed",
+  "rules": [
+    "BND-004"
+  ]
+}

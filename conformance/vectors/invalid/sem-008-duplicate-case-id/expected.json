@@ -1,0 +1,7 @@
+{
+  "description": "The same case id appears twice.",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-008"
+  ]
+}

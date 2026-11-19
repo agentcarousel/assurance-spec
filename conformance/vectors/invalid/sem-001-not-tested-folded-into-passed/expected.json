@@ -1,0 +1,7 @@
+{
+  "description": "Summary reports the not-tested case as passed (INV-1).",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-001"
+  ]
+}

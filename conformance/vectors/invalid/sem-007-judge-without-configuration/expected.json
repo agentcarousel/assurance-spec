@@ -1,0 +1,7 @@
+{
+  "description": "llm_judge assertions with no recorded judge configuration (INV-4).",
+  "result": "nonconformant",
+  "rules": [
+    "SEM-007"
+  ]
+}

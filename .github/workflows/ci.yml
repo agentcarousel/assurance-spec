@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Install uv
+        run: pipx install uv==0.13.5
+
+      - name: Schemas are valid JSON Schema 2020-12
+        run: uvx check-jsonschema@0.38.2 --check-metaschema schemas/0.1/*.json
+
+      - name: Conformance vectors
+        run: uv run --script conformance/verify.py --vectors conformance/vectors
+
+      - name: Example bundle verifies
+        run: uv run --script conformance/verify.py examples/mock-bundle --minisign-pubkey examples/mock-bundle.pub
+
+      - name: Vectors are regenerated from the current example
+        run: |
+          uv run --script conformance/make_vectors.py
+          git diff --exit-code -- conformance/vectors
