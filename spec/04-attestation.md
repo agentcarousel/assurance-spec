@@ -21,10 +21,10 @@ Files that are not standard are informative. Their presence does not change the 
 
 ## 4.2 In-toto statement
 
-`attestation.intoto.json` is an in-toto Statement v1:
+`attestation.intoto.json` is an [in-toto](https://in-toto.io/) Statement v1:
 
 - `predicateType`: `https://agentcarousel.com/spec/predicates/agent-evaluation/v0.1`
-- `subject`: the **tested artifacts**, following in-toto's guidance for test results ("the source
+- `subject`: the **tested artifacts**, following [in-toto](https://in-toto.io/)'s guidance for test results ("the source
   artifacts tested"):
   - one subject per `configuration.test_suite.files[*]`, named by its `path`
   - one subject for `configuration.system_prompt`, when present, named by its `path` or
@@ -43,7 +43,7 @@ manifest lists the statement. Integrity flows one way:
 signature → MANIFEST.json → attestation.intoto.json → evidence.json → tested artifacts
 ```
 
-Consumers that only understand in-toto's generic `test-result/v0.1` predicate can map this one as
+Consumers that only understand [in-toto](https://in-toto.io/)'s generic `test-result/v0.1` predicate can map this one as
 described in [08-interop.md](08-interop.md).
 
 ## 4.3 Signatures
@@ -59,7 +59,7 @@ producer. Verifiers obtain public keys through their own trust policy, never by 
 a URL inside the bundle.
 
 **Planned for 0.2 (RFC):** a DSSE envelope around the statement, signed with Ed25519 or
-ECDSA-P256 keys or with Sigstore keyless signing. With it, standard in-toto tooling can verify the
+ECDSA-P256 keys or with Sigstore keyless signing. With it, standard [in-toto](https://in-toto.io/) tooling can verify the
 statement on its own.
 
 [minisign]: https://jedisct1.github.io/minisign/

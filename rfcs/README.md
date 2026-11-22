@@ -16,4 +16,6 @@
 | Assurance profiles and dimensions | Depends on observed tool calls. See spec/07 |
 | Normative portable test-definition format | Reconcile AgentCarousel fixtures and TEVV-Athlon. See spec/02 |
 | DSSE-native signing and key discovery | Ed25519, ECDSA-P256, and Sigstore keyless |
-| Final name and identifier hosting | Requires trademark and collision search |
+
+Adopted without an RFC: the name **AgentCarousel Specification** and the identifier base
+`https://agentcarousel.com/spec/` (2026-11-19).

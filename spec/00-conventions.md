@@ -26,7 +26,7 @@ verifiers MUST treat documents that use it as an unsupported version (see
 ## Digests
 
 Within evidence documents and the manifest, a digest is the lowercase hex SHA-256 of the exact
-bytes, prefixed with `sha256:`. In in-toto statements, digests follow the in-toto `DigestSet`
+bytes, prefixed with `sha256:`. In [in-toto](https://in-toto.io/) statements, digests follow the [in-toto](https://in-toto.io/) `DigestSet`
 form, `{"sha256": "<hex>"}`.
 
 ## Extensions

@@ -1,8 +1,19 @@
 # Changelog
 
-## [Unreleased] — 0.1.0-draft
+## [Unreleased]
+
+Nothing yet.
+
+## [0.1.0] — 2026-11-22 (draft)
+
+First tagged release. Draft: nothing is stable before 1.0 (see [VERSIONING.md](VERSIONING.md)).
 
 ### Changed
+- Reference implementation status refers to AgentCarousel CLI 0.10.1, the current release, which
+  agrees with `conformance/verify.py` on all 19 vectors.
+- The name **AgentCarousel Specification** and the identifier base are adopted; the planned RFC on
+  the final name and identifier hosting is dropped.
+- Mentions of in-toto link to https://in-toto.io/.
 - Licensed under MIT throughout (`LICENSE`). Replaces Apache-2.0 OR MIT for schemas, code and
   test vectors, and CC BY 4.0 for the specification prose.
 - Named the **AgentCarousel Specification**, replacing the working codename.

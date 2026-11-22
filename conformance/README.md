@@ -30,7 +30,7 @@ keeps the original signature to show that such forgery fails once a key is check
 | Implementation | Result |
 |---|---|
 | `conformance/verify.py` | 19/19 |
-| AgentCarousel CLI `agc verify` (0.9.1) | 19/19 results agree. The CLI reports rule ids for SCH/SEM/XDOC/BND-005 failures, and descriptive messages for integrity failures |
+| AgentCarousel CLI `agc verify` (0.10.1; also 0.9.1) | 19/19 results agree. The CLI reports rule ids for SCH/SEM/XDOC/BND-005 failures, and descriptive messages for integrity failures |
 
 Both implementations are maintained by AgentCarousel, so their agreement is not yet
 *independent* evidence ([CHARTER §11](../CHARTER.md#11-roadmap-and-release-gates)). A verifier

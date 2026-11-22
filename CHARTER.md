@@ -1,6 +1,6 @@
 # Architecture and Technical Charter, v0.1 (draft)
 
-> **Status:** Draft 0.1, 2026-11-17. Nothing here is stable.
+> **Status:** Version 0.1.0, a draft, released 2026-11-22. Nothing here is stable before 1.0.
 >
 > **Name:** the AgentCarousel Specification ("AgentCarousel Spec" for short). It carries the
 > AgentCarousel name because AgentCarousel founded and stewards it. Conformance never depends on an
@@ -31,7 +31,7 @@ producer's tooling, a particular model vendor, a governance platform, a cloud, o
    "safe".
 3. **Offline verifiability.** Integrity and conformance checks need only the evidence bundle and
    the verifier's own trust policy. No network access is required.
-4. **Build on existing standards.** Use OpenTelemetry, in-toto, OSCAL, and the NIST and OWASP
+4. **Build on existing standards.** Use OpenTelemetry, [in-toto](https://in-toto.io/), OSCAL, and the NIST and OWASP
    reference models where they fit (section 7). Define new structures only for what is specific to
    agent evaluation.
 5. **Specification over implementation.** If the reference implementation and the specification
@@ -48,7 +48,7 @@ producer's tooling, a particular model vendor, a governance platform, a cloud, o
 - Binding that record to the tested artifacts by content digest, and packaging it so it can be
   signed and verified offline.
 - Rules a verifier applies to decide whether evidence is intact, authentic, and conformant.
-- Mappings to adjacent standards: OpenTelemetry traces, OSCAL assessment results, in-toto
+- Mappings to adjacent standards: OpenTelemetry traces, OSCAL assessment results, [in-toto](https://in-toto.io/)
   attestations, and NIST AI RMF.
 
 **Non-goals:**
@@ -137,12 +137,13 @@ commonly overstates what was shown.
 ## 6. Reference implementation status
 
 The AgentCarousel CLI (`agc`) is the reference implementation. Version 0.8.1 did not satisfy this
-charter. Version 0.9.0 closed most gaps, and 0.9.1 emits this draft's identifiers. Tool calls are
+charter. Version 0.9.0 closed most gaps, 0.9.1 emits this draft's identifiers, and 0.10.1 is the
+current release. Tool calls are
 still synthesized, so no evidence from the reference implementation supports a claim about tool
 behaviour. This table is kept current so that nobody, including AgentCarousel, overstates what the
 reference implementation proves.
 
-| Area | Before 0.9 (v0.8.1) | Released v0.9.x (2026-11-19) | Spec requirement |
+| Area | Before 0.9 (v0.8.1) | v0.9.1 and later (current: v0.10.1) | Spec requirement |
 |---|---|---|---|
 | Signing | Hashes only | minisign signature over `MANIFEST.json`, covering evidence and statement | §4 attestation |
 | Offline verification | `trust-check` contacts the registry first | `agc verify` checks integrity, signature, and v0.1 conformance offline | INV-6 |
@@ -159,7 +160,7 @@ reference implementation proves.
 | Standard | Role in this specification |
 |---|---|
 | **OpenTelemetry GenAI semantic conventions** (`invoke_agent`, `execute_tool`; Development stability) | Describe *what happened* at runtime. Observed trace steps may be derived from OTel spans. This specification does not define a trace format. See [`spec/08-interop.md`](spec/08-interop.md). |
-| **in-toto Attestation Framework** (Statement v1, DSSE) | The integrity and provenance envelope. This specification defines one predicate type for agent evaluations and maps to the generic in-toto `test-result/v0.1` predicate. |
+| **[in-toto](https://in-toto.io/) Attestation Framework** (Statement v1, DSSE) | The integrity and provenance envelope. This specification defines one predicate type for agent evaluations and maps to the generic [in-toto](https://in-toto.io/) `test-result/v0.1` predicate. |
 | **OSCAL** (Assessment Plan and Assessment Results) | How results are communicated to GRC tooling. Evidence defined here maps to Assessment Results. It does not replace them. |
 | **TEVV-Athlon** (NIST AI 200-2) | The assessment-plan structure (goals → blocks → events) that a test suite can implement. It maps to an OSCAL Assessment Plan. |
 | **NIST AI RMF 1.0** | A risk taxonomy for crosswalks only, never a certification basis. Every mapping pins the framework version. A revision of AI RMF 1.0 is in progress. |
@@ -221,7 +222,7 @@ Releases are gated on interoperability, not on dates.
 
 | Release | Gate |
 |---|---|
-| **0.1 (this draft)** | Schemas, prose, and a conformance kit. The reference CLI emits conformant evidence, and the independent Python verifier in `conformance/` verifies it. |
+| **0.1 (released as 0.1.0)** | Schemas, prose, and a conformance kit. The reference CLI emits conformant evidence, and the independent Python verifier in `conformance/` verifies it. |
 | **0.2** | RFCs accepted for assurance profiles and dimensions, for a normative portable test-definition schema, and for DSSE-native signing. Observed tool calls exist in at least one implementation. |
 | **0.9** | At least one producer not written by AgentCarousel emits conformant evidence, and at least two independent verifiers agree on the conformance vectors. |
 | **1.0** | Stable identifiers resolve to the published schemas, and external implementers sit on the steering group. |
