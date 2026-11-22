@@ -14,7 +14,7 @@ used. Producers SHOULD record that version as an extension, for example
 | `execute_tool`, with `gen_ai.tool.name` and `gen_ai.tool.call.id` | One observed tool call. When every tool call in a case comes from these spans, set `trace_sources.tool_calls = observed` |
 | `create_agent` | Not mapped. Agent identity is declared, not inferred from telemetry |
 
-## 8.2 in-toto `test-result/v0.1`
+## 8.2 [in-toto](https://in-toto.io/) `test-result/v0.1`
 
 For consumers that only understand the generic predicate, a producer MAY emit an additional
 statement:

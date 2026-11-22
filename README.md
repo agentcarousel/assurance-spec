@@ -7,7 +7,8 @@ A producer runs an evaluation and writes a bundle. Anyone else can check that bu
 without the producer's tools, a model vendor, or a registry. The check confirms what was tested,
 against which configuration, by which method, with what result, and what was *not* tested.
 
-> **Status: draft 0.1. Not stable.** Identifiers use the base `https://agentcarousel.com/spec/`.
+> **Status: version 0.1.0, a draft. Not stable before 1.0.** Identifiers use the base
+> `https://agentcarousel.com/spec/`.
 > They are names: verifiers never fetch them.
 
 ## Read first
@@ -36,11 +37,13 @@ agentcarousel-evidence-<run>/
 └── …                         # producer-specific files (informative)
 ```
 
+The statement uses the [in-toto](https://in-toto.io/) attestation format.
+
 ## Implementations
 
 | Role | Implementation | Status |
 |---|---|---|
-| Producer and verifier (reference) | [AgentCarousel CLI](https://github.com/agentcarousel/agentcarousel) (`agc export`, `agc verify`) | Emits and verifies v0.1 from agc 0.9.1; agrees with `verify.py` on all vectors. See [CHARTER.md §6](CHARTER.md#6-reference-implementation-status) |
+| Producer and verifier (reference) | [AgentCarousel CLI](https://github.com/agentcarousel/agentcarousel) (`agc export`, `agc verify`) | Emits and verifies v0.1 from agc 0.9.1. The current release, agc 0.10.1, agrees with `verify.py` on all 19 vectors. See [CHARTER.md §6](CHARTER.md#6-reference-implementation-status) |
 | Verifier (Python, separate implementation) | [`conformance/verify.py`](conformance/) | Passes all 19 [conformance vectors](conformance/vectors/) |
 
 Implementations that are independent of AgentCarousel are the main goal of this project. Please
