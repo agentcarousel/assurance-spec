@@ -166,9 +166,6 @@ reference implementation proves.
 | **NIST AI RMF 1.0** | A risk taxonomy for crosswalks only, never a certification basis. Every mapping pins the framework version. A revision of AI RMF 1.0 is in progress. |
 | **OWASP agentic-AI threat guidance** | A source of adversarial scenarios for test suites and future profiles. |
 
-**Prior engagement:** AgentCarousel submitted public comments on NIST AI 200-2 (TEVV-Athlon) on
-2026-10-05.
-
 ## 8. Trust model
 
 The Specification separates three concepts that are often merged into one "trust level":

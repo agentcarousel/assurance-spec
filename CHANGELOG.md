@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
-Nothing yet.
+### Changed
+- Removed an incorrect statement from CHARTER.md §7: it said AgentCarousel had submitted public
+  comments on NIST AI 200-2. No comment was submitted on behalf of AgentCarousel.
 
 ## [0.1.0] — 2026-11-22 (draft)
 
