@@ -2,7 +2,11 @@
 
 ## [Unreleased]
 
-Nothing yet.
+### Changed
+- Removed an incorrect statement from CHARTER.md §7: it said AgentCarousel had submitted public
+  comments on NIST AI 200-2. No comment was submitted on behalf of AgentCarousel.
+- CHARTER.md §6 now lists the reference implementation's OSCAL Assessment Results as not aligned
+  with [spec/08 §8.3](spec/08-interop.md#83-oscal-assessment-results).
 
 ## [0.1.0] — 2026-11-22 (draft)
 

@@ -154,6 +154,7 @@ reference implementation proves.
 | Prompt disclosure | `prompt.md` uploaded whenever present | Withheld by default; `--include-prompt` to disclose | INV-7 |
 | Agent identity | Free-text name only | Optional declared `agent` block; documented fallback id | §4 |
 | Trust states | Registry tiers unsigned, never demoted, auto-promoted | Unchanged (registry not yet updated) | §8: not part of this specification |
+| OSCAL Assessment Results | Built from compliance scores over recent run history | **Not aligned.** Still built from run history, not from `evidence.json`: one observation per assessed control rather than per case, every method `TEST` (including `llm_judge` scores), and custom properties without an `ns` | [spec/08 §8.3](spec/08-interop.md#83-oscal-assessment-results) |
 
 ## 7. Relationship to existing standards
 
@@ -165,9 +166,6 @@ reference implementation proves.
 | **TEVV-Athlon** (NIST AI 200-2) | The assessment-plan structure (goals → blocks → events) that a test suite can implement. It maps to an OSCAL Assessment Plan. |
 | **NIST AI RMF 1.0** | A risk taxonomy for crosswalks only, never a certification basis. Every mapping pins the framework version. A revision of AI RMF 1.0 is in progress. |
 | **OWASP agentic-AI threat guidance** | A source of adversarial scenarios for test suites and future profiles. |
-
-**Prior engagement:** AgentCarousel submitted public comments on NIST AI 200-2 (TEVV-Athlon) on
-2026-10-05.
 
 ## 8. Trust model
 
