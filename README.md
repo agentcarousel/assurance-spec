@@ -53,7 +53,7 @@ uv run --script conformance/verify.py examples/mock-bundle --minisign-pubkey exa
 uv run --script conformance/verify.py --vectors conformance/vectors
 ```
 
-## Licenses
+## License
 
-- Schemas, code, and test vectors: [Apache-2.0](LICENSE-APACHE) OR [MIT](LICENSE-MIT).
-- Specification prose: [CC BY 4.0](LICENSE-CC-BY-4.0).
+[MIT](LICENSE), for everything in this repository: the specification text, schemas, code, and test
+vectors.

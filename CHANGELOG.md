@@ -3,6 +3,8 @@
 ## [Unreleased] — 0.1.0-draft
 
 ### Changed
+- Licensed under MIT throughout (`LICENSE`). Replaces Apache-2.0 OR MIT for schemas, code and
+  test vectors, and CC BY 4.0 for the specification prose.
 - Named the **AgentCarousel Specification**, replacing the working codename.
 - Identifiers moved to the base `https://agentcarousel.com/spec/`: schema `$id`s,
   `predicateType` `https://agentcarousel.com/spec/predicates/agent-evaluation/v0.1`, and
